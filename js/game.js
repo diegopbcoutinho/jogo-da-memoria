@@ -25,6 +25,7 @@ const createElement = (tag, className) => {
 let firstCard = '';
 let secondCard = '';
 
+//verificar termino do jogo
 const checkEndGame = () => {
     const disabledCards = document.querySelectorAll(
     '.disabled-card');
@@ -35,6 +36,7 @@ const checkEndGame = () => {
     }
 }
 
+//verificação
 const checkCards = () => {
     const firstCharacter = firstCard.getAttribute('data-character')
     const secondCharacter = secondCard.getAttribute('data-character')
@@ -60,6 +62,7 @@ const checkCards = () => {
     }
 };
 
+//Revelar cartas 
 const revealCard = ({target}) => {
 
     if(target.parentNode.className.includes('reveal-card')) {
@@ -79,6 +82,7 @@ const revealCard = ({target}) => {
     
 }
 
+//Criar cartas
 const createCard = (character) => {
     
     const card = createElement('div', 'card')
@@ -96,6 +100,7 @@ const createCard = (character) => {
     return card;
 }
 
+//Carregar as cartas duplicadas e aleatoriamente
 const loadGame = () => {
 
     const duplicateCharacters = [ ...characters, ...characters ];
@@ -111,6 +116,7 @@ const loadGame = () => {
 
 }
 
+//Temporizador
 const startTimer = () => {
     this.loop = setInterval(() => {
 
@@ -120,6 +126,7 @@ const startTimer = () => {
     }, 1000)
 }
 
+//Nome do jogador, inciar temporizador, carregar cartas
 window.onload = () => {
     
     spanPlayer.innerHTML = localStorage.getItem('player')
