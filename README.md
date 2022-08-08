@@ -1,5 +1,5 @@
-# 💻 Projeto
-Desenvolver um jogo da memória simples, para a construção deste projeto foi usado Javascript.  
+ # 💻 Projeto
+ Para a construção deste projeto foi usado Javascript.  
 
 # Funcionalidades
  Tela de Login com verificador de input.
